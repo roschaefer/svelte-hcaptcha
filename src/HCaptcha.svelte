@@ -13,10 +13,7 @@
 
   declare var hcaptcha: any;
 
-  export enum CaptchaTheme {
-    DARK = 'dark',
-    LIGHT = 'light',
-  }
+  export type CaptchaTheme = 'dark' | 'light'
 </script>
 
 <script lang="ts">
@@ -30,7 +27,7 @@
   export let apihost: string = 'https://js.hcaptcha.com/1/api.js';
   export let hl: string = '';
   export let reCaptchaCompat: boolean = false;
-  export let theme: CaptchaTheme = CaptchaTheme.LIGHT;
+  export let theme: CaptchaTheme = 'light'
   export let size: 'normal' | 'compact' | 'invisible' = 'normal';
 
   export const reset = () => {
